@@ -1,0 +1,20 @@
+github:
+  repo: "haiwen/seafile"
+  access_token: ""  # 可填可不填，用于提高github的请求限制
+
+model:
+  name: "D:/code/seafile_issues/models/paraphrase-MiniLM-L6-v2"  # 语义编码模型
+  embedding_dim: 384
+
+cluster:
+  method: "kmeans"  # 聚类方法
+  n_clusters: 10    # 聚类数量
+
+paths:
+  raw_data: "data/raw/seafile_issues.json"
+  processed_data: "data/processed/issues_processed.pkl"
+  embeddings: "data/embeddings/issue_embeddings.npy"
+
+logging:
+  level: "INFO"
+  file: "logs/app.log"
